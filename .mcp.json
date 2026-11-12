@@ -1,0 +1,22 @@
+{
+  "mcpServers": {
+    "silixon": {
+      "type": "http",
+      "url": "https://app.silixon.io/mcp",
+      "extensions": {
+        "com.openai": {
+          "auth": {
+            "type": "oauth",
+            "client": {
+              "mode": "dcr"
+            },
+            "registrationUrl": "https://app.silixon.io/api/oauth/register",
+            "authorizationUrl": "https://app.silixon.io/oauth/authorize",
+            "tokenUrl": "https://app.silixon.io/api/oauth/token"
+          }
+        }
+      },
+      "oauth_resource": "https://app.silixon.io/mcp"
+    }
+  }
+}

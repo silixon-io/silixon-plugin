@@ -1,0 +1,105 @@
+{
+  "name": "silixon",
+  "version": "1.0.0",
+  "description": "Design printed circuit boards with Rocky, siliXon's PCB design agent: from an idea to a placed, routed and checked board that is ready to manufacture.",
+  "author": {
+    "name": "siliXon",
+    "url": "https://silixon.io"
+  },
+  "homepage": "https://silixon.io",
+  "repository": "https://github.com/silixon-io/silixon-plugin",
+  "license": "MIT",
+  "keywords": [
+    "pcb",
+    "electronics",
+    "hardware",
+    "kicad",
+    "circuit board"
+  ],
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/get-started/SKILL.md",
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Design a board from an idea.",
+              "prompt": "Use siliXon to design a small board that blinks an LED from USB-C.",
+              "tools_triggered": "ask_rocky, wait",
+              "expected_behavior": "Starts a Rocky turn, follows it until it ends, and relays Rocky's reply. If Rocky offers choices, shows them and lets the person decide."
+            },
+            {
+              "description": "Answer Rocky's question.",
+              "prompt": "Pick the option you recommended for Rocky's question.",
+              "tools_triggered": "ask_rocky",
+              "expected_behavior": "Sends the chosen label with its offer id, and Rocky continues the design."
+            },
+            {
+              "description": "See a project.",
+              "prompt": "Show me my latest siliXon project.",
+              "tools_triggered": "list_projects, read_board",
+              "expected_behavior": "Lists the person's projects and shows the latest in the board card with a link to the editor."
+            },
+            {
+              "description": "Check a board for manufacturing.",
+              "prompt": "Is this board ready to manufacture?",
+              "tools_triggered": "check_board",
+              "expected_behavior": "Runs the manufacturing check and reports its readiness and what needs attention."
+            },
+            {
+              "description": "Place and route.",
+              "prompt": "Place this board again and route it.",
+              "tools_triggered": "place_board, route_board",
+              "expected_behavior": "Runs the autoplacer, then the autorouter, and reports whether each result was saved."
+            }
+          ],
+          "negative": [
+            {
+              "description": "General electronics theory.",
+              "prompt": "Explain how a transistor works."
+            },
+            {
+              "description": "A non-PCB design task.",
+              "prompt": "Design a logo for my company."
+            },
+            {
+              "description": "Code unrelated to a board.",
+              "prompt": "Write a Python script that sorts a list."
+            }
+          ]
+        }
+      },
+      "publication": {
+        "release_notes": "First release: design boards with Rocky; place, route and check them; import KiCad projects; download the fab files."
+      }
+    }
+  },
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "siliXon",
+    "shortDescription": "Design PCBs with Rocky",
+    "longDescription": "Agentic software for circuit design.\n\nUse siliXon services like placement, routing, manufacturing checks or ask Rocky, our agent, for any changes or even the whole design.\n\nAttach photos, datasheets, import KiCad projects, see a live board as it changes or seamlessly open it in our editor.\n\nA siliXon account is required. Thanks for feedback provided if any.",
+    "developerName": "siliXon",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Design printed circuit boards",
+      "Place and route boards",
+      "Run manufacturing checks",
+      "Import KiCad projects"
+    ],
+    "websiteURL": "https://silixon.io",
+    "supportURL": "https://discord.gg/k9rjZxVpED",
+    "privacyPolicyURL": "https://silixon.io/privacy",
+    "termsOfServiceURL": "https://silixon.io/terms",
+    "defaultPrompt": [
+      "Tell Rocky to design a simple board",
+      "Check my existing projects",
+      "Import my KiCad project and route it"
+    ],
+    "brandColor": "#6B9209",
+    "brandColorDark": "#CCF664",
+    "composerIcon": "./assets/logo.svg",
+    "logo": "./assets/logo.svg"
+  }
+}

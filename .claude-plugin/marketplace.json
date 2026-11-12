@@ -1,0 +1,17 @@
+{
+  "name": "silixon",
+  "owner": {
+    "name": "siliXon",
+    "url": "https://silixon.io"
+  },
+  "metadata": {
+    "description": "siliXon, agentic software for electronics design."
+  },
+  "plugins": [
+    {
+      "name": "silixon",
+      "source": "./",
+      "description": "Design printed circuit boards with Rocky, siliXon's PCB design agent."
+    }
+  ]
+}
