@@ -25,7 +25,7 @@ claude plugin install silixon@silixon
 
 **Any other MCP client**: add `https://app.silixon.io/mcp` as a remote (Streamable HTTP) server. It signs in with OAuth.
 
-**Try a local copy**: in Claude Code, `claude --plugin-dir <checkout>`. In the ChatGPT desktop app, `codex plugin marketplace add <checkout>`, then `codex plugin add silixon@silixon`, and restart the app; it shows under Plugins, on the Personal tab. To try another siliXon deployment, change the server URL in `.mcp.json` and `.cursor-plugin/plugin.json`.
+**Try a local copy**: in Claude Code, `claude --plugin-dir <checkout>`. In the ChatGPT desktop app, `codex plugin marketplace add <checkout>`, then `codex plugin add silixon@silixon`, and restart the app; it shows under Plugins, on the Personal tab. To try another siliXon deployment, replace `https://app.silixon.io` with its origin everywhere in `.mcp.json` (the server URL, the OAuth URLs and `oauth_resource`) and in `.cursor-plugin/plugin.json`.
 
 ## Skills
 
