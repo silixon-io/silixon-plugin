@@ -15,8 +15,7 @@
             "tokenUrl": "https://app.silixon.io/api/oauth/token"
           }
         }
-      },
-      "oauth_resource": "https://app.silixon.io/mcp"
+      }
     }
   }
 }
