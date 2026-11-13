@@ -1,5 +1,6 @@
 {
   "name": "silixon",
+  "displayName": "siliXon",
   "version": "1.0.0",
   "description": "Design printed circuit boards with Rocky, siliXon's PCB design agent: from an idea to a placed, routed and checked board that is ready to manufacture.",
   "author": {
@@ -16,5 +17,8 @@
     "circuit board"
   ],
   "license": "MIT",
-  "privacyPolicyUrl": "https://silixon.io/privacy"
+  "privacyPolicyUrl": "https://silixon.io/privacy",
+  "documentationUrl": "https://silixon.io/blog/silixon-mcp",
+  "supportUrl": "https://discord.gg/k9rjZxVpED",
+  "termsOfServiceUrl": "https://silixon.io/terms"
 }
