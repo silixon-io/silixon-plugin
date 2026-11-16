@@ -75,7 +75,7 @@
     }
   },
   "skills": "./skills/",
-  "mcpServers": "./.mcp.json",
+  "mcpServers": "./.codex-plugin/mcp.json",
   "interface": {
     "displayName": "siliXon",
     "shortDescription": "Design PCBs with Rocky",

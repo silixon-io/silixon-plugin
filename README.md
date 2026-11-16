@@ -25,7 +25,7 @@ claude plugin install silixon@silixon
 
 **Any other MCP client**: add `https://app.silixon.io/mcp` as a remote (Streamable HTTP) server. It signs in with OAuth.
 
-**Try a local copy**: in Claude Code, `claude --plugin-dir <checkout>`. In the ChatGPT desktop app, `codex plugin marketplace add <checkout>`, then `codex plugin add silixon@silixon`, and restart the app; it shows under Plugins, on the Personal tab. To try another siliXon deployment, replace `https://app.silixon.io` with its origin everywhere in `.mcp.json` (the server URL and the OAuth URLs) and in `.cursor-plugin/plugin.json`.
+**Try a local copy**: in Claude Code, `claude --plugin-dir <checkout>`. In the ChatGPT desktop app, `codex plugin marketplace add <checkout>`, then `codex plugin add silixon@silixon`, and restart the app; it shows under Plugins, on the Personal tab. To try another siliXon deployment, replace `https://app.silixon.io` with its origin everywhere in `.mcp.json` (the server URL), `.codex-plugin/mcp.json` (the server URL and the OAuth URLs) and `.cursor-plugin/plugin.json`.
 
 ## Skills
 
@@ -38,7 +38,7 @@ claude plugin install silixon@silixon
 
 ## Layout
 
-One folder serves every directory: `.claude-plugin/`, `.cursor-plugin/` and `.codex-plugin/` hold each client's manifest, beside the shared `skills/`, `assets/` and `.mcp.json`.
+One folder serves every directory: `.claude-plugin/`, `.cursor-plugin/` and `.codex-plugin/` hold each client's manifest, beside the shared `skills/`, `assets/` and `.mcp.json`. ChatGPT's copy of the server entry, `.codex-plugin/mcp.json`, also carries OpenAI's OAuth block; Claude's directory refuses that block in `.mcp.json`.
 
 ## Links
 
